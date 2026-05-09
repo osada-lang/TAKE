@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LP/HP制作 - TAKE INTERNATIONAL Co., Ltd.</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="assets/logo.png" alt="TAKE INTERNATIONAL ロゴ"></a></div>
+        <nav><ul><li><a href="index.html#about">会社紹介</a></li><li><a href="index.html#message">代表挨拶</a></li><li><a href="index.html#services">事業内容</a></li><li><a href="index.html#contact">お問い合わせ</a></li></ul></nav>
+    </header>
+    <main>
+        <section class="sub-hero service-web-hero fade-in-up">
+            <div class="breadcrumb"><a href="index.html">トップ</a> &gt; 事業内容 &gt; LP/HP制作</div>
+            <h1>LP/HP制作</h1>
+        </section>
+        <section class="service-detail-section">
+            <div class="service-intro fade-in-up delay-100">
+                <p>ただ作るだけではない、成果に直結するウェブサイトを。ベトナム市場の特性を熟知したクリエイティブチームが、多言語対応からデザイン、コーディングまで一貫してサポート。現地のユーザーに刺さる、戦略的なウェブ活用を提案します。</p>
+            </div>
+            <h2 class="fade-in-up">当社の強み</h2>
+            <div class="detail-grid">
+                <div class="detail-card fade-in-up delay-100">
+                    <h3>ベトナム市場に最適化されたデザイン</h3>
+                    <p>ベトナム人ユーザーが好む配色、レイアウト、操作感を踏まえたデザインを制作。現地で「選ばれる」サイトを実現します。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-200">
+                    <h3>多言語対応（日・英・越）</h3>
+                    <p>単なる翻訳ではなく、言語ごとの文化的ニュアンスを理解したライティングと構築を行い、グローバルな訴求力を高めます。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-300">
+                    <h3>スマホファースト・高速表示</h3>
+                    <p>ベトナムのネット環境とスマホ普及率に合わせ、徹底した軽量化とレスポンシブ対応を行い、ストレスのない体験を提供します。</p>
+                </div>
+            </div>
+            <div class="sub-cta fade-in-up">
+                <h2>ウェブサイトの力で、<br>ベトナムでの存在感を最大化しませんか？</h2>
+                <a href="index.html#contact" class="btn-contact">無料相談・制作のお問い合わせ</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><p>&copy; 2026 TAKE INTERNATIONAL Co., Ltd. All rights reserved.</p></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            setTimeout(() => { document.querySelector('.sub-hero').classList.add('visible'); }, 100);
+        });
+    </script>
+</body>
+</html>
