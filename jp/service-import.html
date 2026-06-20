@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ベトナム輸入・調達代行（ソーシング支援） - TAKE INTERNATIONAL Co., Ltd.</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="../assets/logo.png" alt="TAKE INTERNATIONAL ロゴ"></a></div>
+        <nav><ul><li><a href="index.html#about">会社紹介</a></li><li><a href="index.html#message">代表挨拶</a></li><li><a href="index.html#services">事業内容</a></li><li><a href="index.html#contact">お問い合わせ</a></li><li class="lang-switch"><a href="../vn/index.html" class="lang-link" onclick="localStorage.setItem('preferred_lang', 'vn')">VN</a></li></ul></nav>
+    </header>
+    <main>
+        <section class="sub-hero service-import-hero fade-in-up">
+            <div class="breadcrumb"><a href="index.html">トップ</a> &gt; 事業内容 &gt; ベトナム輸入・調達代行</div>
+            <h1>ベトナム輸入・調達代行</h1>
+        </section>
+        <section class="service-detail-section">
+            <div class="service-intro fade-in-up delay-100">
+                <p>ベトナムで製造された優れた製品や原材料を日本に仕入れたい企業様向けに、サプライヤーの選定から現地での交渉、品質管理、日本への貿易・物流実務までをワンストップで代行。言語や商習慣の壁を乗り越え、安心の調達ルートを構築します。</p>
+            </div>
+            <h2 class="fade-in-up">輸入・調達代行の強み</h2>
+            <div class="detail-grid">
+                <div class="detail-card fade-in-up delay-100">
+                    <h3>優良サプライヤーの開拓・選定</h3>
+                    <p>ベトナム現地ネットワークを駆使し、品質基準、供給力、価格競争力を満たす適切な現地製造工場・仕入れ元を選定。信頼できる取引先を発掘します。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-200">
+                    <h3>条件交渉と徹底した品質管理</h3>
+                    <p>ベトナム語による細かい契約・仕様書の擦り合わせ、価格交渉を代行。また出荷前には現地スタッフが抜き取り検品などを行い、不良品の発生や混入を防ぎます。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-300">
+                    <h3>複雑な輸出入・物流実務の代行</h3>
+                    <p>原産地証明書（C/O）の手配から通関書類作成、フォワーダー選定、日本国内の配送手配まで、貿易に必要な実務を包括的にサポートし、スムーズな配送を実現します。</p>
+                </div>
+            </div>
+            <div class="sub-cta fade-in-up">
+                <h2>ベトナムからの調達ルート開拓をご検討ですか？</h2>
+                <a href="index.html#contact" class="btn-contact">輸入・調達代行について問い合わせる</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><p>&copy; 2026 TAKE INTERNATIONAL Co., Ltd. All rights reserved.</p></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            setTimeout(() => { document.querySelector('.sub-hero').classList.add('visible'); }, 100);
+        });
+    </script>
+</body>
+</html>
