@@ -688,3 +688,223 @@ h2::after {
     background: var(--dark-grey);
     transform: translateY(-5px);
 }
+
+/* =========================================
+   Language Switcher & Entry Page Styles
+   ========================================= */
+
+/* Language Switcher Badge */
+.lang-switch {
+    display: flex;
+    align-items: center;
+}
+
+.lang-link {
+    background-color: var(--primary-red-light);
+    color: var(--primary-red) !important;
+    padding: 0.25rem 0.85rem !important;
+    border-radius: 20px;
+    font-weight: 700 !important;
+    font-size: 0.85rem !important;
+    transition: var(--transition-standard) !important;
+}
+
+.lang-link:hover {
+    background-color: var(--primary-red) !important;
+    color: var(--white) !important;
+}
+
+.lang-link::after {
+    display: none !important;
+}
+
+/* Entry Page (Language Selection) Styles */
+.entry-body {
+    background: radial-gradient(circle at center, #1a1a2e 0%, #0d0d15 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    color: var(--white);
+}
+
+.entry-container {
+    max-width: 1000px;
+    width: 100%;
+    text-align: center;
+    z-index: 10;
+}
+
+.entry-logo {
+    margin-bottom: 2.5rem;
+}
+
+.entry-logo img {
+    height: 70px;
+    filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.2));
+}
+
+.entry-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(90deg, #ffffff, #888888);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.entry-subtitle {
+    font-size: 1.1rem;
+    opacity: 0.6;
+    margin-bottom: 3.5rem;
+}
+
+.entry-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.entry-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    padding: 3.5rem 2.5rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.entry-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: -1;
+}
+
+.entry-card.jp-card::before {
+    background: radial-gradient(circle at top right, rgba(211, 17, 24, 0.15), transparent 70%);
+}
+
+.entry-card.vn-card::before {
+    background: radial-gradient(circle at top right, rgba(211, 17, 24, 0.15), rgba(244, 196, 48, 0.05) 50%, transparent 70%);
+}
+
+.entry-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.entry-card:hover::before {
+    opacity: 1;
+}
+
+.entry-card.jp-card:hover {
+    border-color: rgba(211, 17, 24, 0.4);
+    box-shadow: 0 20px 40px rgba(211, 17, 24, 0.15);
+}
+
+.entry-card.vn-card:hover {
+    border-color: rgba(244, 196, 48, 0.4);
+    box-shadow: 0 20px 40px rgba(244, 196, 48, 0.15);
+}
+
+.entry-card-flag {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.entry-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--white);
+    text-align: center;
+}
+
+.entry-card h2::after {
+    display: none !important; /* Hide the title underline */
+}
+
+.entry-card p {
+    font-size: 0.95rem;
+    opacity: 0.7;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.entry-btn {
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.jp-card .entry-btn {
+    background: var(--white);
+    color: #1a1a2e;
+}
+
+.vn-card .entry-btn {
+    background: #f4c430; /* Gold */
+    color: #1a1a2e;
+}
+
+.entry-card:hover .entry-btn {
+    transform: scale(1.05);
+}
+
+.jp-card:hover .entry-btn {
+    background: var(--primary-red);
+    color: var(--white);
+}
+
+.vn-card:hover .entry-btn {
+    background: #d31118; /* Vietnamese Red */
+    color: var(--white);
+}
+
+.entry-settings {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    opacity: 0.6;
+    cursor: pointer;
+    user-select: none;
+    transition: opacity 0.3s ease;
+}
+
+.entry-settings:hover {
+    opacity: 1;
+}
+
+.entry-settings input {
+    cursor: pointer;
+}
+

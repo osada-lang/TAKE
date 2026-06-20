@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>アクアリウム水槽メンテナンス - TAKE INTERNATIONAL Co., Ltd.</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="../assets/logo.png" alt="TAKE INTERNATIONAL ロゴ"></a></div>
+        <nav><ul><li><a href="index.html#about">会社紹介</a></li><li><a href="index.html#message">代表挨拶</a></li><li><a href="index.html#services">事業内容</a></li><li><a href="index.html#contact">お問い合わせ</a></li><li class="lang-switch"><a href="../vn/service-aquarium.html" class="lang-link" onclick="localStorage.setItem('preferred_lang', 'vn')">VN</a></li></ul></nav>
+    </header>
+    <main>
+        <section class="sub-hero service-aquarium-hero fade-in-up">
+            <div class="breadcrumb"><a href="index.html">トップ</a> &gt; 事業内容 &gt; アクアリウム水槽メンテナンス</div>
+            <h1>アクアリウム水槽メンテナンス</h1>
+        </section>
+        <section class="service-detail-section">
+            <div class="service-intro fade-in-up delay-100">
+                <p>水と緑が織りなす極上の癒しを、ベトナムのオフィスやご家庭へ。日本国内での豊富な経験と確かな技術力を活かし、設計から設置、定期的な水質管理まで包括的にサポート。手間をかけずに、常にクリスタルな美しさを維持します。</p>
+            </div>
+            <h2 class="fade-in-up">サービスの特長</h2>
+            <div class="detail-grid">
+                <div class="detail-card fade-in-up delay-100">
+                    <h3>日本品質の高度な管理技術</h3>
+                    <p>多くの実績に裏打ちされた高度な水質管理体制。生体に負担をかけず、美しく健康なアクアリウムを長期間維持することが可能です。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-200">
+                    <h3>フルオーダーメイドのデザイン</h3>
+                    <p>設置場所の雰囲気や貴社のコンセプトに合わせ、空間を最大限に引き立てるオリジナルアクアリウムをデザイン・設置します。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-300">
+                    <h3>手間いらずの定期メンテナンス</h3>
+                    <p>水換え、掃除、機材の点検、生体の追加など、すべてプロが代行。お客様は何もしなくても、常に最高の状態をお楽しみいただけます。</p>
+                </div>
+            </div>
+            <div class="sub-cta fade-in-up">
+                <h2>空間に「潤い」と「驚き」を。<br>導入のご相談、お見積もりはこちらから。</h2>
+                <a href="index.html#contact" class="btn-contact">水槽メンテナンスのお問い合わせ</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><p>&copy; 2026 TAKE INTERNATIONAL Co., Ltd. All rights reserved.</p></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            setTimeout(() => { document.querySelector('.sub-hero').classList.add('visible'); }, 100);
+        });
+    </script>
+</body>
+</html>

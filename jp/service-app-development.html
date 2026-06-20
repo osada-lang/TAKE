@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマホアプリ制作 - TAKE INTERNATIONAL Co., Ltd.</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="../assets/logo.png" alt="TAKE INTERNATIONAL ロゴ"></a></div>
+        <nav><ul><li><a href="index.html#about">会社紹介</a></li><li><a href="index.html#message">代表挨拶</a></li><li><a href="index.html#services">事業内容</a></li><li><a href="index.html#contact">お問い合わせ</a></li><li class="lang-switch"><a href="../vn/service-app-development.html" class="lang-link" onclick="localStorage.setItem('preferred_lang', 'vn')">VN</a></li></ul></nav>
+    </header>
+    <main>
+        <section class="sub-hero service-app-hero fade-in-up">
+            <div class="breadcrumb"><a href="index.html">トップ</a> &gt; 事業内容 &gt; スマホアプリ制作</div>
+            <h1>スマホアプリ制作</h1>
+        </section>
+        <section class="service-detail-section">
+            <div class="service-intro fade-in-up delay-100">
+                <p>iOS/Android両対応のスマホアプリ制作。企画・UI/UXデザインからストア申請まで、ベトナム市場と日本のクオリティを熟知したチームがトータルでサポートします。最新のハイブリッド開発技術により、高品質かつ効率的なアプリ展開を実現します。</p>
+            </div>
+            <h2 class="fade-in-up">当社の強み</h2>
+            <div class="detail-grid">
+                <div class="detail-card fade-in-up delay-100">
+                    <h3>ハイブリッド開発（iOS/Android両対応）</h3>
+                    <p>一つのコードベースで両OSに対応する開発手法を採用。開発コストを抑えつつ、メンテナンス性の高いアプリを提供します。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-200">
+                    <h3>ストア申請・運用まで一貫サポート</h3>
+                    <p>App StoreやGoogle Playへの複雑な申請手続きも代行。審査基準を熟知したプロが、スムーズな公開を支援します。</p>
+                </div>
+                <div class="detail-card fade-in-up delay-300">
+                    <h3>ユーザー視点のUI/UXデザイン</h3>
+                    <p>ベトナム現地のスマホ利用習慣を考慮したインターフェースを設計。直感的に使え、リピートされるアプリを形にします。</p>
+                </div>
+            </div>
+            <div class="sub-cta fade-in-up">
+                <h2>アプリの力で、<br>ベトナムでのビジネスを加速させませんか？</h2>
+                <a href="index.html#contact" class="btn-contact">無料相談・開発のお問い合わせ</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><p>&copy; 2026 TAKE INTERNATIONAL Co., Ltd. All rights reserved.</p></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            setTimeout(() => { document.querySelector('.sub-hero').classList.add('visible'); }, 100);
+        });
+    </script>
+</body>
+</html>
