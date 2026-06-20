@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ trợ xuất khẩu hàng hóa sang Nhật Bản - TAKE INTERNATIONAL Co., Ltd.</title>
+    <meta name="description" content="TAKE INTERNATIONAL hỗ trợ xuất khẩu hàng hóa sang Nhật Bản. Kết nối thương mại, đàm phán hợp đồng, hoàn thiện thủ tục hải quan và logistics cho doanh nghiệp Việt Nam.">
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Noto+Sans+JP:wght@400;500;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img src="../assets/logo.png" alt="TAKE INTERNATIONAL Logo"></a></div>
+        <nav><ul><li><a href="index.html#about">Giới thiệu</a></li><li><a href="index.html#message">Thông điệp</a></li><li><a href="index.html#services">Dịch vụ</a></li><li><a href="index.html#contact">Liên hệ</a></li><li class="lang-switch"><a href="../jp/service-import.html" class="lang-link" onclick="localStorage.setItem('preferred_lang', 'jp')">JP</a></li></ul></nav>
+    </header>
+    <main>
+        <section class="sub-hero service-export-hero fade-in-up">
+            <div class="breadcrumb"><a href="index.html">Trang chủ</a> &gt; Lĩnh vực kinh doanh &gt; Hỗ trợ xuất khẩu sang Nhật Bản</div>
+            <h1>Hỗ trợ xuất khẩu sang Nhật Bản</h1>
+        </section>
+        <section class="service-detail-section">
+            <div class="service-intro fade-in-up delay-100">
+                <p>Chúng tôi hỗ trợ trọn gói cho các doanh nghiệp, nhà sản xuất Việt Nam muốn đưa các sản phẩm chất lượng cao tiếp cận thị trường Nhật Bản. Từ việc tìm kiếm đối tác nhập khẩu, đàm phán thương mại đến giải quyết các thủ tục hải quan phức tạp và logistics, chúng tôi cam kết xây dựng kênh xuất khẩu ổn định và bền vững.</p>
+            </div>
+            <h2 class="fade-in-up">Thế mạnh dịch vụ của chúng tôi</h2>
+            <div class="detail-grid">
+                <div class="detail-card fade-in-up delay-100">
+                    <h3>Kết nối trực tiếp đối tác Nhật Bản</h3>
+                    <p>Tận dụng mạng lưới doanh nghiệp rộng lớn tại Nhật Bản để kết nối trực tiếp nhà sản xuất Việt Nam với các nhà nhập khẩu, nhà phân phối và chuỗi bán lẻ uy tín.</p>
+                </div>
+                <div class="detail-card fade-in-up delay-200">
+                    <h3>Hỗ trợ kỹ thuật & Đảm bảo tiêu chuẩn</h3>
+                    <p>Tư vấn và hỗ trợ cải tiến sản phẩm, bao bì, nhãn mác đáp ứng đầy đủ các tiêu chuẩn chất lượng khắt khe và các quy định pháp lý của thị trường Nhật Bản.</p>
+                </div>
+                <div class="detail-card fade-in-up delay-300">
+                    <h3>Thủ tục hải quan & Logistics tối ưu</h3>
+                    <p>Đảm nhận toàn bộ các khâu chuẩn bị chứng từ hải quan, chứng nhận xuất xứ (C/O), kiểm dịch và tối ưu hóa chi phí vận chuyển quốc tế.</p>
+                </div>
+            </div>
+            <div class="sub-cta fade-in-up">
+                <h2>Bạn muốn đưa sản phẩm của mình vươn tầm thị trường Nhật Bản?</h2>
+                <a href="index.html#contact" class="btn-contact">Liên hệ tư vấn xuất khẩu miễn phí</a>
+            </div>
+        </section>
+    </main>
+    <footer class="footer"><p>&copy; 2026 TAKE INTERNATIONAL Co., Ltd. All rights reserved.</p></footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+            setTimeout(() => { document.querySelector('.sub-hero').classList.add('visible'); }, 100);
+        });
+    </script>
+</body>
+</html>

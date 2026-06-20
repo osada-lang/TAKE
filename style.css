@@ -559,6 +559,7 @@ h2::after {
 .service-attend-hero { background: linear-gradient(rgba(26, 26, 36, 0.7), rgba(0, 119, 182, 0.6)), url('画像集/視察アテンド.png') center/cover no-repeat; }
 .service-backoffice-hero { background: linear-gradient(rgba(26, 26, 36, 0.7), rgba(0, 119, 182, 0.6)), url('画像集/バックオフィス支援.png') center/cover no-repeat; }
 .service-import-hero { background: linear-gradient(rgba(26, 26, 36, 0.7), rgba(0, 119, 182, 0.6)), url('画像集/輸入調達代行.png') center/cover no-repeat; }
+.service-export-hero { background: linear-gradient(rgba(26, 26, 36, 0.7), rgba(0, 119, 182, 0.6)), url('画像集/輸入調達代行.png') center/cover no-repeat; }
 .service-system-hero { background: linear-gradient(rgba(26, 26, 36, 0.7), rgba(0, 119, 182, 0.6)), url('画像集/スマホアプリ制作.jpg') center/cover no-repeat; }
 
 .sub-hero h1 {
